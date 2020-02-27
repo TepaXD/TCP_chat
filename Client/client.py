@@ -6,7 +6,7 @@ import sys
 
 # variables
 HEADERLEN = 10
-IP = "172.17.0.1"
+#IP = "172.17.0.1"
 # 172.17.0.1 is the IP my server docker generated, so in order to connect it has to listen to that IP instead of the regular 127.0.0.1. That is used only if the server and client are running on the same network without a container
 PORT = 9000
 
@@ -14,7 +14,7 @@ PORT = 9000
 def main():
     print(f"Welcome to terminal chat!\n")
     myusername = input("Give username: ")
-    # IP = input("Give room ip (default is 127.0.0.1): ")
+    IP = input("Give room ip (default is 127.0.0.1): ")
     print(
         f"\nYou have connected to {IP}. To update the chat, press ENTER, to leave type /q, to PM someone type @username at the start of the message.\n")
     clientsocket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
